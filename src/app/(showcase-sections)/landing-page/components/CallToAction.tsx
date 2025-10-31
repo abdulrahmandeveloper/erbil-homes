@@ -2,7 +2,7 @@ import { Button } from "@heroui/react";
 
 const CallToAction = () => {
   return (
-    <section className="relative   flex flex-row items-center justify-center  h-[70vh] bg-[url('/images/landing-call-to-action.jpg')]  bg-cover bg-center">
+    <section className="relative   flex flex-row items-center justify-center  h-[75vh] bg-[url('/images/landing-call-to-action.jpg')]  bg-cover bg-center">
       <div className="absolute inset-0 bg-black/40"></div>
 
       <div className=" flex items-center text-white">

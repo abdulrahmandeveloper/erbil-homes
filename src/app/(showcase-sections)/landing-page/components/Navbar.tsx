@@ -4,11 +4,12 @@ import Logo from "@/components/Logo";
 import { Button, Link } from "@heroui/react";
 import { navLinks } from "@/constants/nav-links";
 import CustomButton from "@/components/CustomButton";
-import AuthFormComponent from "@/components/FormComponent";
+import FormContainer from "@/components/forms/FormContainer";
 import { useState } from "react";
 
 const Navbar = ({ sticky = false }: { sticky?: boolean }) => {
   const [showForm, setShowForm] = useState<boolean>(false);
+  const [loggedIn, setLoggedIn] = useState<boolean>(false);
 
   console.log(showForm);
 
@@ -35,7 +36,10 @@ const Navbar = ({ sticky = false }: { sticky?: boolean }) => {
         </div>
         <div className="flex justify-end items-center gap-4">
           <CustomButton
-            onClick={() => setShowForm(!showForm)}
+            onClick={() => {
+              setShowForm(!showForm);
+              setLoggedIn(true);
+            }}
             text="Sign in"
             classNames="text-white rounded-2xl px-3.5 py-1.5 hover:cursor-pointer hover:bg-neutral-700 border-2 border-neutral-700"
           ></CustomButton>
@@ -43,16 +47,19 @@ const Navbar = ({ sticky = false }: { sticky?: boolean }) => {
           <CustomButton
             text="Sign up"
             classNames="text-white bg-neutral-700 px-3.5 py-1.5 rounded-2xl hover:cursor-pointer hover:bg-none border-2 border-neutral-700"
-            onClick={() => setShowForm(!showForm)}
+            onClick={() => {
+              setShowForm(!showForm);
+              setLoggedIn(false);
+            }}
           ></CustomButton>
         </div>
       </div>
-      {showForm && (
-        <AuthFormComponent
-          isOpen={showForm}
-          onClose={() => setShowForm(false)}
-        />
-      )}
+
+      <FormContainer
+        isOpen={showForm}
+        onClose={() => setShowForm(false)}
+        loggedIn={loggedIn}
+      />
     </>
   );
 };
