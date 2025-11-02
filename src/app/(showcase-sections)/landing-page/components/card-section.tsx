@@ -1,4 +1,4 @@
-import CustomCard from "@/components/CustomCard";
+import CustomCard from "@/components/custom-card";
 
 const CardsSection = () => {
   return (

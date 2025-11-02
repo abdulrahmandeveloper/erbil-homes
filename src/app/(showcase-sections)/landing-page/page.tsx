@@ -1,7 +1,7 @@
-import CardsSection from "./components/CardsSection";
-import CallToAction from "./components/CallToAction";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
+import CardsSection from "./components/card-section";
+import CallToAction from "./components/call-to-action";
+import HeroSection from "./components/hero-section";
+import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
 
 const page = () => {

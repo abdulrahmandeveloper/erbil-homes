@@ -3,8 +3,8 @@
 import Logo from "@/components/Logo";
 import { Button, Link } from "@heroui/react";
 import { navLinks } from "@/constants/nav-links";
-import CustomButton from "@/components/CustomButton";
-import FormContainer from "@/components/forms/FormContainer";
+import CustomButton from "@/components/custom-button";
+import FormContainer from "@/components/forms/form-container";
 import { useState } from "react";
 
 const Navbar = ({ sticky = false }: { sticky?: boolean }) => {
