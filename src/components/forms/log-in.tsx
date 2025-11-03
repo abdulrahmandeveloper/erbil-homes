@@ -1,11 +1,13 @@
 import {
   Button,
+  Checkbox,
   Input,
   Modal,
   ModalBody,
   ModalContent,
   ModalFooter,
   ModalHeader,
+  Select,
 } from "@heroui/react";
 import Logo from "../Logo";
 import { useState } from "react";
@@ -74,6 +76,13 @@ const LogIn = ({ isOpen, onClose }: ILogInProps) => {
                       "focus:outline-none   focus:border-neutral-400 border border-neutral-400 mx-1 m-2 p-3 rounded-lg",
                   }}
                 ></Input>
+                <div className="flex flex-row items-center gap-2 mt-3">
+                  <Checkbox
+                    defaultSelected
+                    className="w-5 h-5 flex hover:cursor-pointer checked:bg-none"
+                  />
+                  Remember me
+                </div>
               </div>
             </ModalBody>
             <ModalFooter className="gap-5">
